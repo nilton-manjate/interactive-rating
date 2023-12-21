@@ -83,6 +83,18 @@ button {
   color: var(--lightGrey);
 }
 
+button:hover {
+  cursor: pointer;
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+button:focus {
+  background-color: var(--mediumGrey);
+  color: white;
+  font-weight: bold;
+}
+
 .send input {
   margin-top: 20px;
   width: 100%;
@@ -94,6 +106,13 @@ button {
   background-color: var(--orange);
   border: 1px solid var(--veryDarkBlue);
   border-radius: 30px;
+}
+
+.send input:hover, .send input:focus {
+  cursor: pointer;
+  background-color: white;
+  color: var(--orange);
+  font-weight: bold;
 }
 
 
