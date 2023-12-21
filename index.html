@@ -32,13 +32,17 @@
       </section>
       <section class="rate">
         <form method="GET" action="cadastro.php">
-           <button type="button" onclick="rate(1)">1</button>
-           <button type="button" onclick="rate(2)">2</button>
-           <button type="button" onclick="rate(3)">3</button>
-           <button type="button" onclick="rate(4)">4</button>
-           <button type="button" onclick="rate(5)">5</button>
-           <input name="frate" id="irate" type="hidden">
-           <input type="submit" value="SUBMIT">
+           <div class="click">
+             <button type="button" onclick="rate(1)">1</button>
+             <button type="button" onclick="rate(2)">2</button>
+             <button type="button" onclick="rate(3)">3</button>
+             <button type="button" onclick="rate(4)">4</button>
+             <button type="button" onclick="rate(5)">5</button>
+           </div>
+           <div class="send">
+             <input name="frate" id="irate" type="hidden">
+             <input type="submit" value="SUBMIT">
+           </div>
         </form>
       </section>
     </div>
