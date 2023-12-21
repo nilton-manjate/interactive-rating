@@ -21,10 +21,6 @@
   padding: 0;
 }
 
-.thankYou {
-  display: none; /* Hide the 'thank you' display */
-}
-
 /* Body */
 body {
   height: 100vh;
@@ -103,8 +99,36 @@ button {
 
 /* Thank You Screen */
 
-/* Image */
+.thankYou {
+  margin: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; /* This property centers the image */
+}
 
 /* Output message */
+#selected {
+  background-color: hsl(216deg 12% 54% / 20%);
+  color: var(--orange);
+  padding: 10px;
+  border-radius: 30px;
+}
 
 /* Text */
+.thanksText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.thanksText h2 {
+  font-size: 25px;
+}
+
+.thanksText p {
+  color: var(--lightGrey);
+  text-align: center;
+  line-height: 25px;
+}
