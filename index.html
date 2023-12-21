@@ -9,13 +9,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
 
+  <link rel="stylesheet" href="assets/styles/mobile.css">
   <title>Frontend Mentor | Interactive rating component</title>
 </head>
 <body>
 
+  <main>
+<!-- Principal Content -->
+    <div class="principalContent">
+      <div class="star">
+        <img src="assets/images/icon-star.svg" alt="Star">
+      </div>
+      <section class="text">
+        <h1>How did we do?</h1>
+        <p>
+          Please let us know how we did with your support
+          request. All feedback is appreciated to help us
+          improve our offering!
+        </p>
+      </section>
+      <section class="rate">
+        <form method="GET" action="cadastro.php">
+           <button type="button" onclick="rate(1)">1</button>
+           <button type="button" onclick="rate(2)">2</button>
+           <button type="button" onclick="rate(3)">3</button>
+           <button type="button" onclick="rate(4)">4</button>
+           <button type="button" onclick="rate(5)">5</button>
+           <input name="frate" id="irate" type="hidden">
+           <input type="submit" value="SUBMIT">
+        </form>
+      </section>
+    </div>
 
+<!-- Thank you screen -->
+    <div class="thankYou">
+      <div class="icon">
+        <img src="assets/images/illustration-thank-you.svg" alt="Success">
+      </div>
+      <p id="selected"></p>
+      <section class="thanksText">
+        <h2>Thank you!</h2>
+        <p>
+          We appreciate you taking the time to give a rating.
+          If you ever need more support, don't hesitate to get
+          in touch!
+        </p>
+      </section>
+    </div>
+  </main>
+  <script>
+    const irate = document.getElementById("irate");
+    const selected = document.getElementById("selected");
+
+    function rate(value) {
+      irate.value = value;
+      selected.textContent = `You selected ${value} out of 5`
+    }
+
+  </script>
 </body>
 
 </html>
