@@ -31,7 +31,7 @@
         </p>
       </section>
       <section class="rate">
-        <form method="GET" action="cadastro.php">
+        <form id="sendRate" method="GET" action="cadastro.php">
            <div class="click">
              <button type="button" onclick="rate(1)">1</button>
              <button type="button" onclick="rate(2)">2</button>
@@ -66,11 +66,18 @@
   <script>
     const irate = document.getElementById("irate");
     const selected = document.getElementById("selected");
+    const sendRate = document.getElementById("sendRate");
 
     function rate(value) {
       irate.value = value;
       selected.textContent = `You selected ${value} out of 5`
     }
+
+    sendRate.addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementsByClassName("principalContent")[0].style.display = "none";
+      document.getElementsByClassName("thankYou")[0].style.display = "flex";
+    });
 
   </script>
 </body>
