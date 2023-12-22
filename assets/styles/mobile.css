@@ -151,3 +151,20 @@ button:focus {
   text-align: center;
   line-height: 25px;
 }
+
+
+/* Style for larger screens */
+
+@media only screen and (min-width: 600px) {
+  main {
+    width: 400px;
+  }
+
+  .text h1 {
+    font-size: 28px;
+  }
+
+  .click {
+    width: 95%;
+  }
+}
